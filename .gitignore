@@ -1,0 +1,14 @@
+*.py[cod]
+.hgignore~
+.gitignore~
+.hgtags
+.hg/
+.tox/
+
+build/
+builddocs/
+builddocs.zip
+dist/
+src/pif.egg-info
+input_file.dat
+data.dat

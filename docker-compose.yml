@@ -1,0 +1,16 @@
+server:
+  build: ./
+  expose:
+  - 12345
+  command: 'python server.py --port 12345'
+  volumes:
+  - './:/usr/src/app'
+
+
+client:
+  build: ./
+  links:
+  - 'server:server'
+  command: 'python client.py --host server --port 12345 --file input_file.dat'
+  volumes:
+  - './:/usr/src/app'
